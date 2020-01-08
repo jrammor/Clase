@@ -1,0 +1,48 @@
+//EJERCICIO 9//
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    double entregado, precio, cambio_total, resto, resto_2, resto_3, resto_4;
+    int monedas_cincuenta, monedas_euro,monedas_diez, monedas_uno, monedas_cinco;
+
+    cout<<"Introduzca precio: ";
+    cin>>precio;
+
+    cout<<"Introduzca efectivo: ";
+    cin>>entregado;
+
+    cambio_total=entregado-precio;
+
+    monedas_euro=(int)cambio_total;
+
+    resto = cambio_total - monedas_euro * 1;
+
+    monedas_cincuenta = (int) (resto / 0.5);
+
+    resto_2=cambio_total-(monedas_euro*1+monedas_cincuenta*0.5);
+
+    monedas_diez= (int) (resto_2/0.10);
+
+    resto_3=cambio_total-(monedas_euro*1+monedas_cincuenta*0.5+monedas_diez*0.10);
+
+    monedas_cinco= (int) (resto_3/0.05);
+
+    resto_4=resto_3-(monedas_cinco*0.05);
+
+    monedas_uno=(int) (resto_4/0.01);
+
+    cout<<"Su cambio es: " <<monedas_euro<< " moneda/s de 1 euro "<< endl;
+
+    cout<<monedas_cincuenta << " de 50 centimos"<< endl;
+
+    cout<<monedas_diez << " de 10 centimos"<< endl;
+
+    cout<<monedas_cinco << " de 5 centimos"<< endl;
+
+    cout<<monedas_uno << " de 1 centimo"<< endl;
+
+
